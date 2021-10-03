@@ -1,0 +1,26 @@
+@import "../mixins";
+@import "../variables";
+
+.homepage {
+  @include cards-container;
+
+  &-show {
+    grid-area: 1 / 1 /2 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    color: $primary;
+  }
+
+  .show-more {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $primary;
+
+    &:hover {
+      color: #0f52ba;
+    }
+  }
+}

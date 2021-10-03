@@ -1,0 +1,28 @@
+@import "../variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: $primary;
+  max-height: 26rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  .title {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-bottom: #b8b8b8 1px solid;
+  }
+}

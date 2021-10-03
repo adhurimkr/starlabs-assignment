@@ -1,0 +1,23 @@
+@import "../variables";
+
+.nav {
+  height: 7rem;
+  background-color: $primary;
+  padding: 1rem;
+
+  ul {
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  a:hover,
+  a.active {
+    color: #95bcf0;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #95bcf0;
+  }
+}

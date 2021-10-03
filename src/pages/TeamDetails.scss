@@ -1,0 +1,22 @@
+@import "../variables";
+
+.team-details-container {
+  display: grid;
+  place-items: center;
+  background-color: $bg-color;
+
+  header {
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: $primary;
+    max-width: 55rem;
+    margin: 3rem auto;
+  }
+
+  h1 {
+    border-bottom: solid 3px #e8e8e8;
+    color: #fff;
+    text-align: center;
+  }
+}

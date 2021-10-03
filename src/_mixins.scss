@@ -1,0 +1,9 @@
+@mixin cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: 7rem;
+  gap: 3rem 7rem;
+  padding: 3rem;
+  background-color: $bg-color;
+  min-height: 100vh;
+}

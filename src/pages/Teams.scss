@@ -1,0 +1,49 @@
+@import "../variables";
+@import "../mixins";
+
+.teams {
+  @include cards-container;
+
+  &-filter {
+    grid-area: 1 / 1 /2 / -1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .search {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &-icon {
+        font-size: 1.7rem;
+        position: absolute;
+        right: 4px;
+        color: $primary;
+      }
+
+      &-input,
+      &-select {
+        padding: 0.5rem;
+        border: 1px solid $primary;
+
+        &:focus {
+          border: 2px solid $primary;
+          outline: none;
+        }
+      }
+
+      &-country {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+        .label {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
