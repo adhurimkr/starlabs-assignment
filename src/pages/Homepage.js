@@ -5,7 +5,10 @@ import "./Homepage.scss";
 import useAxios from "../hooks/useAxios";
 
 const Homepage = () => {
-  const { response } = useAxios();
+  const { response, isLoading, error } = useAxios();
+
+  if (isLoading) return <h1 className="center">Loading Teams...</h1>;
+  if (error) return <h1 className="center">Something went wrong!</h1>;
 
   return (
     <div className="homepage">

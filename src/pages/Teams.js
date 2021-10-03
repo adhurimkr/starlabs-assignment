@@ -5,7 +5,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import useAxios from "../hooks/useAxios";
 
 const Teams = () => {
-  const { response } = useAxios();
+  const { response, isLoading, error } = useAxios();
   const [filteredTeams, setFilteredTeams] = useState([]);
   const [asc, setAsc] = useState(true);
   const [searchName, setSearchName] = useState("");
@@ -40,6 +40,9 @@ const Teams = () => {
 
     setFilteredTeams(filteredCountry);
   };
+
+  if (isLoading) return <h1 className="center">Loading Teams...</h1>;
+  if (error) return <h1 className="center">Something went wrong!</h1>;
 
   return (
     <div className="teams">
@@ -91,11 +94,7 @@ const Teams = () => {
           id={team.id}
         />
       ))}
-      {filteredTeams.length === 0 && (
-        <h1 style={{ textAlign: "center", gridArea: "2 / 1/ 3 / -1" }}>
-          No teams found
-        </h1>
-      )}
+      {filteredTeams.length === 0 && <h1 className="center">No teams found</h1>}
     </div>
   );
 };
