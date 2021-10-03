@@ -91,6 +91,11 @@ const Teams = () => {
           id={team.id}
         />
       ))}
+      {filteredTeams.length === 0 && (
+        <h1 style={{ textAlign: "center", gridArea: "2 / 1/ 3 / -1" }}>
+          No teams found
+        </h1>
+      )}
     </div>
   );
 };
