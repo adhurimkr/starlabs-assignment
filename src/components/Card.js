@@ -17,9 +17,10 @@ const Card = ({ name, email, website, constituency, id }) => {
         <p>
           <strong>Constituency:</strong> {constituency}
         </p>
-        <button className="btn-details">
-          <Link to={`/teams/${id}`}>More info</Link>
-        </button>
+
+        <Link to={`/teams/${id}`} className="btn-details">
+          More info
+        </Link>
       </div>
     </div>
   );

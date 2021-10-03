@@ -20,10 +20,13 @@ a {
 .btn-details {
   margin: auto;
   cursor: pointer;
+  width: 7rem;
 }
 
 .btn-details,
 .btn-sort {
+  font-size: 1.4rem;
+  text-align: center;
   display: block;
   padding: 0.8rem;
   background-color: $primary;
