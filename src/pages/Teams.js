@@ -47,7 +47,7 @@ const Teams = () => {
         <div className="search">
           <SearchOutlined className="search-icon" />
           <input
-            type="search"
+            type="text"
             placeholder="Search teams by name"
             className="search-input"
             onChange={(e) => setSearchName(e.target.value)}
