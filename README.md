@@ -1,2 +1,2 @@
-# Starlabs Internship Assignment
-Made for starlabs internship program
+# StarLabs Internship Assignment
+Built for StarLabs internship program
