@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Teams.scss";
 import Card from "../components/Card";
-import { SearchOutlined } from "@ant-design/icons";
 import useAxios from "../hooks/useAxios";
+import Filter from "../components/Filter";
 
 const Teams = () => {
   const { response, isLoading, error } = useAxios();
@@ -46,44 +46,12 @@ const Teams = () => {
 
   return (
     <div className="teams">
-      <div className="teams-filter">
-        <div className="search">
-          <SearchOutlined className="search-icon" />
-          <input
-            type="text"
-            placeholder="Search teams by name"
-            className="search-input"
-            onChange={(e) => setSearchName(e.target.value)}
-          ></input>
-        </div>
-        <button onClick={sort} className="btn-sort">{`Sort ${
-          asc ? "DSC" : "ASC"
-        }`}</button>
-        <div className="search-country">
-          <label className="label" htmlFor="selectCountry">
-            Filter by country
-          </label>
-          <select
-            id="selectCountry"
-            className="search-select"
-            onChange={selectCountry}
-          >
-            <option value="ALL">ALL</option>
-            <option value="DE">Deutschland</option>
-            <option value="US">USA</option>
-            <option value="AE">Arab Emirates</option>
-            <option value="CA">Canada</option>
-            <option value="NL">Netherlands</option>
-            <option value="AT">Austria</option>
-            <option value="GR">Greece</option>
-            <option value="CR">Croatia</option>
-            <option value="BE">Belgium</option>
-            <option value="MX">Mexico</option>
-            <option value="CZ">Czech Republic</option>
-            <option>Italy</option>
-          </select>
-        </div>
-      </div>
+      <Filter
+        selectCountry={selectCountry}
+        sort={sort}
+        setSearchName={setSearchName}
+        asc={asc}
+      />
       {filteredTeams?.map((team) => (
         <Card
           name={team["team-full"]}
